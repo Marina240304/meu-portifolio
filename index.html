@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Inovador</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: #2c3e50;
+            position: relative;
+        }
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            animation: fadeIn 1.5s ease-out;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            position: relative;
+        }
+        nav a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #FFDEE9;
+            transition: width 0.3s;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #34495e;
+            text-align: center;
+            position: relative;
+        }
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #FFDEE9;
+            margin: 10px auto 20px;
+        }
+        section p, section ul {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: center;
+        }
+        .sobre-mim-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .sobre-mim-texto {
+            max-width: 600px;
+            margin: 20px;
+        }
+        .sobre-mim-imagem {
+            max-width: 300px;
+            margin: 20px;
+        }
+        .sobre-mim-imagem img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #ecf0f1;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        ul li:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Keyframes para animação */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .sobre-mim-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Portfólio</h1>
+    </header>
+
+    <nav>
+        <a href="#sobre-mim">Sobre Mim</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#formacao">Formação</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section id="sobre-mim">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-mim-container">
+            <div class="sobre-mim-texto">
+                <p>Sou uma pessoa criativa e apaixonada por tecnologia, com ampla experiência em desenvolvimento de soluções inovadoras. Estudo Bacharelado em Sistemas de Informação e busco constantemente aplicar meus conhecimentos em projetos desafiadores.</p>
+            </div>
+            <div class="sobre-mim-imagem">
+                <img src="foto.jpeg" alt="Minha Foto">
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Desenvolvimento Web - HTML, CSS, JavaScript</li>
+            <li>Frameworks - React, Vue.js, Angular</li>
+            <li>Design UX/UI</li>
+            <li>Conhecimento em Python e Java</li>
+        </ul>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <ul>
+            <li><strong>Projeto A:</strong> Projeto Robotron - praticando JavaScript.</li>
+            <li><strong>Projeto B:</strong> Plataforma de e-commerce personalizada.</li>
+            <li><strong>Projeto C:</strong> Website responsivo e otimizado para empresa.</li>
+        </ul>
+    </section>
+
+    <section id="formacao">
+        <h2>Formação Acadêmica</h2>
+        <ul>
+            <li>Bacharelado em Sistemas de Informação - Instituição Cruzeiro do Sul (em andamento)</li>
+        </ul>
+    </section>
+
+    <section id="cursos">
+        <h2>Cursos</h2>
+        <ul>
+            <li> HTML e CSS: responsividade com mobile-first - 2022</li>
+            <li>JavaScript: crinado requisições - 2022</li>
+            <li>Curso integração Backend com Frontend - 2023</li>
+            <li>Curso de Java - 2023</li>
+        </ul>
+        <p><strong> + 25 cursos</strong></p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo através do email: <strong>marinamedeirosunic@gmail.com</strong> ou pelo LinkedIn <strong>Marina Bolzan</strong>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para ativar animações de scroll suave
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const scrollPos = window.scrollY + window.innerHeight;
+
+            sections.forEach(section => {
+                if (scrollPos > section.offsetTop + 100) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
